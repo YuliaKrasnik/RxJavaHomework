@@ -82,7 +82,7 @@ class TextSearchFragment : Fragment() {
 
     private fun countCoincidencesInText(enteredString: String, emitter: FlowableEmitter<Int>) {
         var count = 0
-        val listStringsFromFullText = tvFullText.text.toString().split(" ").filter { x -> x != " " }
+        val listStringsFromFullText = tvFullText.text.toString().split(" ").filter { x -> x != "" }
         listStringsFromFullText.forEach { item ->
             if (enteredString in item) {
                 count++
